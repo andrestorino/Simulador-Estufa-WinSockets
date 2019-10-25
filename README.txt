@@ -1,14 +1,7 @@
-Integrantes do grupo:
-
-Gabriel Francischini de Souza 9361052
-AndrÈ Luis Storino Junior 9293668
-KauÍ Lopes de Moraes 9277576
-
-README:
-O cÛdigo foi feito em lingugagem C no sistema operacional Windows 10 (embora ele deva funcionar em outras versıes do Windows).
+O c√≥digo foi feito em lingugagem C no sistema operacional Windows 10 (embora ele deva funcionar em outras vers√µes do Windows).
 
 Utilize uma IDE para compilar os arquivos .c e executar os programas separadamente.
-Comandos de compilaÁ„o (caso deseje compilar na m„o):
+Comandos de compila√ß√£o (caso deseje compilar na m√£o):
 
 gcc gerenciador.c -o gerenciador -lwsock32
 gcc cliente.c -o cliente -lwsock32
@@ -24,16 +17,16 @@ Usar flag -lwsock32 para compilar
 
 Ligar primeiro o gerenciador, depois preferencialmente o cliente (para configurar caso desejado), os atuadores, e depois os sensores.
 
-… necess·rio permitir
+√â necess√°rio permitir
 
 Foi usado o IP de localhost da maquina para fazer a simulacao.
 
 Nao foi usado json como especificado no protocolo.
 
-O gerenciador buga caso a conexao com algum componente seja fechada abruptamente (ie o programa rodando algum componente for fechado), pois o socket ainda estaria aberto. Caso o programa de algum componente for finalizado de maneira correta (o cliente por exemplo, por meio da opÁ„o 0) e o socket for fechado, o gerenciador continua rodando, podendo inclusive aceitar que outra conexao com o cliente seja estabelecida no futuro. PorÈm, sÛ È possÌvel fechar o cliente dessa forma pois È esperado que os sensores n„o parem de funcionar e o socket nunca se feche.
+O gerenciador buga caso a conexao com algum componente seja fechada abruptamente (ie o programa rodando algum componente for fechado), pois o socket ainda estaria aberto. Caso o programa de algum componente for finalizado de maneira correta (o cliente por exemplo, por meio da op√ß√£o 0) e o socket for fechado, o gerenciador continua rodando, podendo inclusive aceitar que outra conexao com o cliente seja estabelecida no futuro. Por√©m, s√≥ √© poss√≠vel fechar o cliente dessa forma pois √© esperado que os sensores n√£o parem de funcionar e o socket nunca se feche.
 
-Foram gerados e somados n˙meros aleatÛrios na leitura dos sensores para que se pudesse ter alteraÁıes que causassem algum tipo de resposta do gerenciador. Os atuadores recebem a mensagem de liga/desliga do gerenciador a medida que È necess·rio, e imprimem em seus consoles quando s„o ativados ou desativados.
+Foram gerados e somados n√∫meros aleat√≥rios na leitura dos sensores para que se pudesse ter altera√ß√µes que causassem algum tipo de resposta do gerenciador. Os atuadores recebem a mensagem de liga/desliga do gerenciador a medida que √© necess√°rio, e imprimem em seus consoles quando s√£o ativados ou desativados.
 
-Os atuadores em si n„o fazem nada para modificar a leitura dos sensores, tendo em vista que isso iria precisar que novas mensagens n„o definidas no protocolo fossem criadas sÛ para esta simulaÁ„o. O objetivo era que eles recebessem o sinal de liga desliga e, em algum caso real, que eles conseguissem modificar a leitura dos sensores conforme necess·rio, e esse objetivo foi alcanÁado.
+Os atuadores em si n√£o fazem nada para modificar a leitura dos sensores, tendo em vista que isso iria precisar que novas mensagens n√£o definidas no protocolo fossem criadas s√≥ para esta simula√ß√£o. O objetivo era que eles recebessem o sinal de liga desliga e, em algum caso real, que eles conseguissem modificar a leitura dos sensores conforme necess√°rio, e esse objetivo foi alcan√ßado.
 
 Foi disponibilizado um print dos processos rodando (teste.png)
